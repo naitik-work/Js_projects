@@ -9,7 +9,7 @@ html , body{
 }
 :root{
     /* background-color */
-    --bg-primary-color: rgb(36, 35, 35);
+    --bg-primary-color: rgb(68, 91, 144);
     --bg-fill-color: rgb(225, 225, 225);
     --bg-food-color: rgb(200, 50, 50);
 
@@ -79,6 +79,7 @@ section .infos{
     /* width: 30px;
     height: 30px; */
     border: 1px solid var(--border-primary-color);
+    border-radius: 50%;
 
 }
 
@@ -88,4 +89,39 @@ section .infos{
 
 .food{
     background-color: var(--bg-food-color);
+}
+
+.btn{
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.modal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: #33333323;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .start-game,.game-over{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+}
+.modal .game-over{
+    display: none;
 }
