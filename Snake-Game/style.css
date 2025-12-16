@@ -10,6 +10,8 @@ html , body{
 :root{
     /* background-color */
     --bg-primary-color: rgb(36, 35, 35);
+    --bg-fill-color: rgb(225, 225, 225);
+    --bg-food-color: rgb(200, 50, 50);
 
     /* text-color */
     --text-primary-color: rgb(220, 212, 212);
@@ -78,4 +80,12 @@ section .infos{
     height: 30px; */
     border: 1px solid var(--border-primary-color);
 
+}
+
+.fill{
+    background-color: var(--bg-fill-color);
+}
+
+.food{
+    background-color: var(--bg-food-color);
 }
