@@ -95,6 +95,16 @@ function render(){
         gameOverModal.style.display='flex';
         return;
     }
+    for (let i = 0; i < snake.length; i++) {
+    if (head.x === snake[i].x && head.y === snake[i].y) {
+        clearInterval(intervalId);
+        clearInterval(timeIntervalId);
+        modal.style.display = 'flex';
+        startGameModal.style.display = 'none';
+        gameOverModal.style.display = 'flex';
+        return;
+    }
+}
 
     snake.forEach(segment=>{
         blocks[`${segment.x}, ${segment.y}`].classList.remove('fill');
